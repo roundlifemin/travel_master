@@ -1,10 +1,16 @@
+import sys
+import pysqlite3
+sys.modules['sqlite3'] = pysqlite3
+
 import streamlit as st
-# from crewai import Crew, Process, Task
-# from agents import coordinator_agent
-# from langchain_openai import ChatOpenAI
+from crewai import Crew, Process, Task
+from agents import coordinator_agent
+from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 
 from crew import TravelCoordinatorCrew
+
+
 
 load_dotenv()
 
